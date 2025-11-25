@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fawn's Family Cat Rescue & Lounge specializes in cat rescue, rehabilitation, and rehoming. We operate Davis County's first Cat Lounge, focusing on special needs cats and ethical adoption practices.">
+    <title>Our Mission | Fawn's Family Cat Rescue & Lounge</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #6b46c1 0%, #9333ea 100%);
+            color: #fff;
+            padding: 1.5rem 1rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 0.95rem;
+            opacity: 0.95;
+        }
+        
+        .nav {
+            background: #7c3aed;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            margin: 0.25rem;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+        
+        .nav a:hover {
+            background: #6b46c1;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 2rem 0;
+            border-bottom: 3px solid #e9d5ff;
+            margin-bottom: 2rem;
+        }
+        
+        .hero h2 {
+            font-size: 2rem;
+            color: #6b46c1;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-text {
+            font-size: 1.05rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+            line-height: 1.8;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+            padding: 2rem 0;
+            border-top: 2px solid #f3e8ff;
+            border-bottom: 2px solid #f3e8ff;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #9333ea;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.95rem;
+            color: #666;
+        }
+        
+        .section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .section h3 {
+            font-size: 1.5rem;
+            color: #6b46c1;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #e9d5ff;
+        }
+        
+        .section p {
+            margin-bottom: 1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .section ul {
+            margin: 1rem 0 1rem 1.5rem;
+            color: #555;
+        }
+        
+        .section li {
+            margin-bottom: 0.7rem;
+            line-height: 1.7;
+        }
+        
+        .highlight-box {
+            background: #faf5ff;
+            border-left: 4px solid #9333ea;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .cta-section h3 {
+            font-size: 1.75rem;
+            color: #6b46c1;
+            margin-bottom: 1rem;
+            border: none;
+        }
+        
+        .cta-section p {
+            font-size: 1.05rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #9333ea;
+            color: #fff;
+        }
+        
+        .btn-primary:hover {
+            background: #7c3aed;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: #6b46c1;
+            color: #fff;
+        }
+        
+        .btn-secondary:hover {
+            background: #5b21b6;
+            transform: translateY(-2px);
+        }
+        
+        .btn-tertiary {
+            background: #a855f7;
+            color: #fff;
+        }
+        
+        .btn-tertiary:hover {
+            background: #9333ea;
+            transform: translateY(-2px);
+        }
+        
+        .footer {
+            background: #6b46c1;
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .footer p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer a {
+            color: #e9d5ff;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            .hero-text {
+                font-size: 1rem;
+            }
+            
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Fawn's Family Cat Rescue & Lounge</h1>
+        <p>Davis County's First Cat Lounge | 501(c)(3) Nonprofit</p>
+    </header>
+    
+    <nav class="nav">
+        <a href="https://fawnsfamilyrescue.org">Home</a>
+        <a href="https://fawnsfamilyrescue.org/adoptable-cats">Adoptable Cats</a>
+        <a href="https://fawnsfamilyrescue.org/donations">Donate</a>
+        <a href="https://fawnsfamilyrescue.org/volunteering">Volunteer</a>
+    </nav>
+    
+    <main class="container">
+        <section class="hero">
+            <h2>Our Mission</h2>
+            <p class="hero-text">Fawn's Family Rescue specializes in cat rescue, rehabilitation, community outreach, fostering, and rehoming of cats primarily from local Utah animal shelters and other rescue organizations. We focus on vulnerable cat populations that are often overlooked by the system, pulling approximately 10% of our cats with physical or behavioral special needs from at-risk shelters.</p>
+            <p class="hero-text">We operate Davis County's first Cat Lounge where we focus on ethical adoption practices, community growth, special needs cat care, and post-adoptive care programs to directly tackle the main causes of animal surrenders.</p>
+        </section>
+        
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-number">550+</span>
+                <span class="stat-label">Animals Rescued</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">~200</span>
+                <span class="stat-label">Annual Adoptions</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">2,000+</span>
+                <span class="stat-label">Rescue Visitors/Year</span>
+            </div>
+        </div>
+        
+        <section class="section">
+            <h3>Who We Are</h3>
+            <p>Founded by Areah Watterson and Gary Hsu in May 2022, Fawn's Family Rescue was established to continue life-saving operations as an official 501(c)(3) nonprofit. We are named after Fawn, a skittish chihuahua mix rescued from California who was at risk for euthanasia due to shelter capacity but thrived after months of rehabilitation.</p>
+            <p>After building relationships with rescues, shelters, and volunteers, we outgrew foster-based operations and opened our brick-and-mortar location as Davis County's first Cat Lounge. This free-roaming environment allows guests to interact, play with, and adopt our cats. Through community events like paint nights and partnerships with local businesses, our lounge has become a symbol that rescue work is a community effort.</p>
+        </section>
+        
+        <section class="section">
+            <h3>What We Do</h3>
+            <p>We operate Fawn's Family Cat Rescue & Lounge in Bountiful, UT, housing around 30 cats—all fixed, vaccinated, and microchipped. Open daily from 12:00 PM to 7:00 PM, we charge an entry fee to fund veterinary care and building costs.</p>
+            <ul>
+                <li><strong>Rescue & Rehabilitation:</strong> We prioritize shy, reserved cats not thriving in shelters but showing great potential for adjustment</li>
+                <li><strong>Medical Care:</strong> Every animal receives spay/neuter, vaccinations, microchips, and treatment for any health issues</li>
+                <li><strong>Community Programs:</strong> We host affordable vaccine clinics with rescue-minded veterinarians and support local pet food pantries for families in need</li>
+                <li><strong>Post-Adoptive Care:</strong> Direct communication with directors, affordable petsitting, and assistance finding affordable vet procedures</li>
+                <li><strong>Special Events:</strong> Paint nights, seasonal events, private parties, and collaboration with organizations like Best Friends Animal Society</li>
+            </ul>
+        </section>
+        
+        <div class="highlight-box">
+            <p><strong>Official Coalition Member</strong> of Best Friends Animal Society, working toward achieving no-kill across the United States by 2030.</p>
+            <p><strong>Licensed</strong> by Bountiful City with written support from Davis County Animal Shelter.</p>
+        </div>
+        
+        <section class="section">
+            <h3>Our Approach</h3>
+            <p>Unlike traditional shelters, our cat lounge model provides a stress-free environment where cats can socialize while awaiting adoption. We focus on cats that are often first in line for euthanasia despite many successfully adjusting once given an environment where they can thrive with engagement, safe human interactions, and other cats from similar backgrounds.</p>
+            <p>We believe every cat deserves a chance regardless of age, medical history, or background. Our comprehensive post-adoptive care program ensures families have support for long-term success, directly addressing the housing and financial issues that cause surrenders.</p>
+        </section>
+        
+        <section class="section">
+            <h3>Our Impact</h3>
+            <p>Since October 2025, we have taken in and adopted out 550+ animals into new homes with an average intake of 200 animals annually. We see over 2,000 visitors to our lounge each year and our website receives over 25,000 visitors annually.</p>
+            <p>We partner with organizations to host affordable vaccine clinics administering hundreds of vaccines to reduce preventable diseases. We assist local shelter populations, coordinate efforts on animal hoarding cases, and help animals displaced by natural disasters.</p>
+        </section>
+        
+        <section class="section">
+            <h3>Community Support</h3>
+            <p>We rely on approximately 40 unique volunteers and fosters yearly, contributing around 2,400 hours of direct animal care, rehabilitation, advocacy, and operations. Our volunteers include experienced fosters providing special care, Trap-Neuter-Release volunteers supporting stray populations, and community service individuals who often transition into consistent volunteers.</p>
+            <p>As a 501(c)(3) nonprofit, we depend on community generosity to continue this life-saving work. Every donation, volunteer hour, and adoption makes a direct impact on the cats in our care.</p>
+        </section>
+        
+        <section class="cta-section">
+            <h3>Join Our Mission</h3>
+            <p>Help us continue saving lives and building a no-kill community in Utah.</p>
+            <div class="cta-buttons">
+                <a href="https://fawnsfamilyrescue.org/adoptable-cats" class="btn btn-primary">Adopt a Cat</a>
+                <a href="https://fawnsfamilyrescue.org/donations" class="btn btn-secondary">Donate Now</a>
+                <a href="https://fawnsfamilyrescue.org/volunteering" class="btn btn-tertiary">Volunteer</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p><strong>Fawn's Family Cat Rescue & Lounge</strong></p>
+        <p>2130 Orchard Dr, Bountiful, UT 84010</p>
+        <p>501(c)(3) Nonprofit Organization</p>
+        <p><a href="https://fawnsfamilyrescue.org">Visit Our Main Website</a></p>
+        <p>&copy; 2025 Fawn's Family Cat Rescue & Lounge. All rights reserved.</p>
+    </footer>
+</body>
+</html>
